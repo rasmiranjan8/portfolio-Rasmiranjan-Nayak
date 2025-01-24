@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from './components/Navbar';
+import NavBar from './components/NavBar';
 import Welcome from './components/Welcome';
 import AboutMe from './components/AboutMe';
 const App = () => {
