@@ -1,7 +1,10 @@
-import React from 'react'
-import NavBar from './components/NavBar';
-import Welcome from './components/Welcome';
-import AboutMe from './components/AboutMe';
+import React from "react";
+import NavBar from "./components/NavBar";
+import Welcome from "./components/Welcome";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 const App = () => {
   const projects = [
     {
@@ -148,8 +151,17 @@ const App = () => {
       <NavBar />
       <Welcome />
       <AboutMe />
+      <Projects projects={projects} />
+      <Skills skills={skills} />
+      <Contact />
+      <footer className="bg-gray-800 text-white py-4 text-center">
+        <p>
+          &copy; {new Date().getFullYear()} Rasmiranjan Nayak. All rights
+          reserved.
+        </p>
+      </footer>
     </div>
   );
-}
+};
 
-export default App
+export default App;
