@@ -68,10 +68,29 @@ const AboutMe = () => {
 
           <p className="mt-8">
             My programming journey began with{" "}
-            <b className="text-yellow-400">C</b> and{" "}
-            <b className="text-yellow-200">C++ </b>, which developed my logical
-            and problem-solving skills, creating a strong foundation for web
-            development.
+            <b className="text-yellow-400">C</b>
+            and <b className="text-yellow-200">C++</b>, which developed my
+            logical and problem-solving skills, creating a strong foundation for
+            web development. Programming is the art of creating algorithms and
+            solving problems through logic, while development is the process of
+            implementing these solutions into functional and efficient
+            applications.
+          </p>
+
+          <p className="mt-6">
+            With over{" "}
+            <b className="text-yellow-400">500+ challenges solved on LeetCode</b>
+            , I have proven my expertise in coding and problem-solving.
+          </p>
+
+          <p className="mt-8">
+            I am currently pursuing my studies at{" "}
+            <b className="text-teal-400">
+              Odisha University of Technology and Research, Bhubaneswar
+            </b>
+            , where I have further honed my skills in both programming and
+            development, gaining a comprehensive understanding of modern
+            technologies and their applications.
           </p>
 
           <p>
@@ -81,9 +100,10 @@ const AboutMe = () => {
           </p>
 
           <p className="mt-6">
-            With over{" "}
-            <b className="text-yellow-400">450 challenges solved on LeetCode</b>
-            , I have proven my expertise in coding and problem-solving.
+            In addition to technical skills, I believe in clear communication,
+            adaptability, and teamwork as essential aspects of creating
+            impactful projects that align with user needs and industry
+            standards.
           </p>
         </div>
       </div>
