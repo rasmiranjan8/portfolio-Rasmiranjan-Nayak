@@ -14,11 +14,11 @@ const AboutMe = () => {
       className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white"
     >
       <div className="container mx-auto px-4">
-        <h3 className="text-4xl font-extrabold bg-clip-text mb-12 text-center tracking-wider">
+        <h3 className="text-4xl font-extrabold bg-clip-text mb-12 text-center font-serif">
           About Me
         </h3>
 
-        <div className="text-md md:text-lg leading-relaxed space-y-8 font-serif tracking-wide font-playfair">
+        <div className="text-md md:text-lg leading-relaxed space-y-8 font-Montserrat  tracking-wide">
           <p className="font-medium">
             I am a passionate full-stack web developer dedicated to building
             efficient, scalable, and user-friendly applications. I specialize in
@@ -79,7 +79,9 @@ const AboutMe = () => {
 
           <p className="mt-6">
             With over{" "}
-            <b className="text-yellow-400">500+ challenges solved on LeetCode</b>
+            <b className="text-yellow-400">
+              500+ challenges solved on LeetCode
+            </b>
             , I have proven my expertise in coding and problem-solving.
           </p>
 

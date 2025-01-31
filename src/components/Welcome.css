@@ -11,7 +11,7 @@
 }
 
 .animate-borderShadowHover {
-  animation: borderShadowHover 2s infinite;
+  animation: borderShadowHover 1s infinite;
 }
 
 @keyframes borderShadow {
@@ -33,7 +33,7 @@
 }
 
 .animate-borderShadow {
-  animation: borderShadow 8s infinite;
+  animation: borderShadow 4s infinite;
 }
 
 img:hover .animate-borderShadow {

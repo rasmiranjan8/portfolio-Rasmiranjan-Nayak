@@ -32,25 +32,37 @@ const NavBar = () => {
         <ul
           className={`lg:flex ${
             isMenuOpen ? "flex" : "hidden"
-          } absolute lg:static top-20 left-0 right-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 lg:bg-transparent lg:flex-row flex-col items-center space-y-4 lg:space-y-0 lg:space-x-6 p-4 lg:p-0`}
+          } absolute lg:static top-20 left-0 right-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 lg:bg-transparent lg:flex-row flex-col items-center space-y-4 lg:space-y-0 lg:space-x-16 p-4 lg:py-5`}
         >
           <li>
-            <a href="#about" className="text-white hover:text-gray-100">
+            <a
+              href="#about"
+              className="text-white hover:text-gray-100 hover:border-b"
+            >
               About
             </a>
           </li>
           <li>
-            <a href="#projects" className="text-white hover:text-gray-100">
+            <a
+              href="#projects"
+              className="text-white hover:text-gray-100 hover:border-b"
+            >
               Projects
             </a>
           </li>
           <li>
-            <a href="#skills" className="text-white hover:text-gray-100">
+            <a
+              href="#skills"
+              className="text-white hover:text-gray-100 hover:border-b"
+            >
               Skills
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-white hover:text-gray-100">
+            <a
+              href="#contact"
+              className="text-white hover:text-gray-100 hover:border-b"
+            >
               Contact
             </a>
           </li>
