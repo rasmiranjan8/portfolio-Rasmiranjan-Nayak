@@ -6,19 +6,30 @@ import {
   FaNodeJs,
   FaDatabase,
 } from "react-icons/fa";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutMe = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <section
+      data-aos="fade-up"
       id="about"
-      className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white"
+      className="py-20 bg-blue-950 text-white"
     >
       <div className="container mx-auto px-4">
         <h3 className="text-4xl font-extrabold bg-clip-text mb-12 text-center font-serif">
           About Me
         </h3>
 
-        <div className="text-md md:text-lg leading-relaxed space-y-8 font-Montserrat  tracking-wide">
+        <div className="text-md md:text-lg leading-relaxed space-y-8 font-mono  tracking-wide">
           <p className="font-medium">
             I am a passionate full-stack web developer dedicated to building
             efficient, scalable, and user-friendly applications. I specialize in
@@ -68,8 +79,8 @@ const AboutMe = () => {
 
           <p className="mt-8">
             My programming journey began with{" "}
-            <b className="text-yellow-400">C</b>
-            and <b className="text-yellow-200">C++</b>, which developed my
+            <b className="text-yellow-400"> C </b>
+            and <b className="text-yellow-200"> C++ </b>, which developed my
             logical and problem-solving skills, creating a strong foundation for
             web development. Programming is the art of creating algorithms and
             solving problems through logic, while development is the process of
@@ -85,7 +96,7 @@ const AboutMe = () => {
             , I have proven my expertise in coding and problem-solving.
           </p>
 
-          <p className="mt-8">
+          <p className="mt-8 font-Inter">
             I am currently pursuing my studies at{" "}
             <b className="text-teal-400">
               Odisha University of Technology and Research, Bhubaneswar

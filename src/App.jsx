@@ -102,67 +102,16 @@ const App = () => {
     },
   ];
 
-  const skills = [
-    {
-      name: "HTML",
-      level: 95,
-      iconClass: "",
-    },
-    {
-      name: "CSS",
-      level: 90,
-      iconClass: "text-blue-500",
-    },
-    {
-      name: "JavaScript",
-      level: 85,
-      iconClass: "text-yellow-500",
-    },
-    {
-      name: "React",
-      level: 80,
-      iconClass: "text-blue-400",
-    },
-    {
-      name: "Node.js",
-      level: 75,
-      iconClass: "text-green-500",
-    },
-    {
-      name: "Express",
-      level: 70,
-      iconClass: "text-gray-500",
-    },
-    {
-      name: "MongoDB",
-      level: 75,
-      iconClass: "text-green-500",
-    },
-    {
-      name: "MySQL",
-      level: 70,
-      iconClass: "text-blue-500",
-    },
-    {
-      name: "C",
-      level: 85,
-      iconClass: "text-gray-300",
-    },
-    {
-      name: "C++",
-      level: 85,
-      iconClass: "text-blue-300",
-    },
-  ];
+  
   return (
     <div className="min-h-screen bg-gray-100 pt-16">
       <NavBar />
       <Welcome />
       <AboutMe />
       <Projects projects={projects} />
-      <Skills skills={skills} />
+      <Skills />
       <Contact />
-      <footer className="bg-gray-800 text-white py-4 text-center">
+      <footer className="bg-blue-900 text-white py-4 text-center">
         <p>
           &copy; {new Date().getFullYear()} Rasmiranjan Nayak. All rights
           reserved.
