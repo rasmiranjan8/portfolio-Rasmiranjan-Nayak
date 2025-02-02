@@ -8,7 +8,9 @@ const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 shadow-md fixed top-0 left-0 w-full h-20 flex items-center z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-white font-serif">Rasmiranjan Nayak</h1>
+        <h1 className="text-2xl font-bold text-white font-serif">
+          Rasmiranjan Nayak
+        </h1>
 
         {/* Mobile menu button */}
         <button className="text-white lg:hidden" onClick={toggleMenu}>
@@ -31,8 +33,8 @@ const NavBar = () => {
         {/* Menu items */}
         <ul
           className={`lg:flex ${
-            isMenuOpen ? "flex" : "hidden"
-          } absolute lg:static top-20 left-0 right-0 text-xl lg:bg-transparent lg:flex-row flex-col items-center space-y-4 lg:space-y-0 lg:space-x-16 p-4 lg:py-5`}
+            isMenuOpen ? "flex bg-blue-800 w-36 ml-auto" : "hidden lg:flex"
+          } absolute lg:static top-20 left-0 right-0 text-md lg:bg-transparent lg:flex-row flex-col items-center space-y-4 lg:space-y-0 lg:space-x-16 p-4 lg:py-5`}
         >
           <li>
             <a

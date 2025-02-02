@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Projects = ({ projects }) => {
+  const [allMajorProject, setAllMajorProject] = useState(false);
+  const [allMinorProject, setAllMinorProject] = useState(false);
+
   // Filter projects into major and minor categories
   const majorProjects = projects.filter(
     (project) => project.catagory.toLowerCase() === "significant projects"
@@ -11,9 +15,15 @@ const Projects = ({ projects }) => {
   const minorProjects = projects.filter(
     (project) => project.catagory.toLowerCase() === "learning projects"
   );
+  const showMajorProjects = allMajorProject
+    ? majorProjects
+    : majorProjects.slice(0, 3);
+  const showMinorProjects = allMinorProject
+    ? minorProjects
+    : minorProjects.slice(0, 3);
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      duration: 1000,
       once: true,
       easing: "ease-in-out",
     });
@@ -107,10 +117,23 @@ const Projects = ({ projects }) => {
             Significant Projects
           </h4>
           {majorProjects.length > 0 ? (
-            renderProjects(majorProjects)
+            renderProjects(showMajorProjects)
           ) : (
             <p className="text-gray-400">No Significant Projects available.</p>
           )}
+          <div className="flex justify-end">
+            <button
+              onClick={() => {
+                setAllMajorProject(!allMajorProject);
+              }}
+              className="text-center mt-4 mr-4 hover:cursor-pointer text-white border rounded-md p-2 hover:bg-gray-200 hover:text-black"
+            >
+              <div className="flex items-center justify-center">
+                {allMajorProject ? "View Less Projects" : "View All Projects"}
+                <MdKeyboardArrowRight size={30} />
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Minor Projects Section */}
@@ -119,10 +142,24 @@ const Projects = ({ projects }) => {
             Learning Projects
           </h4>
           {minorProjects.length > 0 ? (
-            renderProjects(minorProjects)
+            renderProjects(showMinorProjects)
           ) : (
             <p className="text-gray-400">No Learning Projects available.</p>
           )}
+
+          <div className="flex justify-end">
+            <button
+              onClick={() => {
+                setAllMinorProject(!allMinorProject);
+              }}
+              className="text-center mt-4 mr-4 hover:cursor-pointer text-white border rounded-md p-2 hover:bg-gray-200 hover:text-black"
+            >
+              <div className="flex items-center justify-center">
+                {allMinorProject ? "View Less Projects" : "View All Projects"}
+                <MdKeyboardArrowRight size={30} />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </section>

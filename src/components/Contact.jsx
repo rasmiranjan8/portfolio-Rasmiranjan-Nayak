@@ -13,18 +13,14 @@ import "aos/dist/aos.css";
 const Contact = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true,
       easing: "ease-in-out",
     });
   }, []);
   return (
-    <section
-      data-aos="fade-up"
-      id="contact"
-      className="py-20 bg-blue-950 text-white"
-    >
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-blue-950 text-white">
+      <div data-aos="fade-up" className="container mx-auto px-4">
         <h3 className="text-4xl font-bold font-serif mb-8 text-center text-gray-100">
           Let's Connect
         </h3>

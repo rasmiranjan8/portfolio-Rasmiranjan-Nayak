@@ -19,12 +19,8 @@ const AboutMe = () => {
     });
   }, []);
   return (
-    <section
-      data-aos="fade-up"
-      id="about"
-      className="py-20 bg-blue-950 text-white"
-    >
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 bg-blue-950 text-white">
+      <div data-aos="fade-up" className="container mx-auto px-4">
         <h3 className="text-4xl font-extrabold bg-clip-text mb-12 text-center font-serif">
           About Me
         </h3>
