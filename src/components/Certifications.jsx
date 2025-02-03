@@ -32,7 +32,7 @@ const Certifications = () => {
     {
       id: 3,
       title: "Cybersecurity Fundamentals",
-      provider: "Microsoft",
+      provider: "IBM",
       image: "./IBMCyberSecurity.jpg",
     },
     {
