@@ -32,11 +32,12 @@ const Projects = ({ projects }) => {
   // Function to render project cards
   const renderProjects = (projectsList) => {
     return (
-      <div data-aos="fade-up" className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
         {/* Grid layout for multiple cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           {projectsList.map((project, index) => (
             <div
+              data-aos="fade-up"
               key={index}
               className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden p-4 transition-transform transform hover:scale-102"
             >
