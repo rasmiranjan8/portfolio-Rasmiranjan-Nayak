@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Certifications from "./components/Certifications";
 const App = () => {
   const projects = [
     {
@@ -110,6 +111,7 @@ const App = () => {
       <AboutMe />
       <Projects projects={projects} />
       <Skills />
+      <Certifications />
       <Contact />
       <footer className="bg-blue-900 text-white py-4 text-center">
         <p>

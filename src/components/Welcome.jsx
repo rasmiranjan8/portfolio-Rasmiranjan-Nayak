@@ -14,13 +14,16 @@ const Welcome = () => {
       easing: "ease-in-out",
     });
   }, []);
+  const openPdf = () => {
+    window.open("/resume-Rasmiranjan Nayak.pdf", "_blank");
+  };
   return (
     <header
      
       className="bg-blue-950 h-screen text-white py-20 text-center"
     >
       <div
-        data-aos="fade-up"
+        data-aos="zoom-in-up"
         className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-10 px-6"
       >
         {/* Text Content */}
@@ -33,6 +36,7 @@ const Welcome = () => {
             front-end and back-end technologies, passionate about creating
             dynamic, responsive applications.
           </p>
+          <button onClick={openPdf} className="mt-8 p-2 border rounded hover:cursor-pointer bg-transparent hover:bg-gray-200 text-white hover:text-black shadow ">View Resume</button>
         </div>
         {/* Image Section */}
         <div className="flex items-center justify-center">

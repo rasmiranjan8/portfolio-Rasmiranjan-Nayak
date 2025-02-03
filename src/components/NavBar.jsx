@@ -34,7 +34,7 @@ const NavBar = () => {
         <ul
           className={`lg:flex ${
             isMenuOpen ? "flex bg-blue-800 w-36 ml-auto" : "hidden lg:flex"
-          } absolute lg:static top-20 left-0 right-0 text-md lg:bg-transparent lg:flex-row flex-col items-center space-y-4 lg:space-y-0 lg:space-x-16 p-4 lg:py-5`}
+          } absolute lg:static top-20 left-0 right-0 text-md lg:bg-transparent lg:flex-row flex-col items-center space-y-4 lg:space-y-0 lg:space-x-12 p-4 lg:py-5`}
         >
           <li>
             <a
@@ -58,6 +58,14 @@ const NavBar = () => {
               className="text-white hover:text-gray-100 hover:border-b"
             >
               Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#certifications"
+              className="text-white hover:text-gray-100 hover:border-b"
+            >
+              certifications
             </a>
           </li>
           <li>
