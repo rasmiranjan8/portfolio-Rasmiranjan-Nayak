@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/Welcome";
 import AboutMe from "./components/AboutMe";
@@ -102,10 +101,10 @@ const App = () => {
       used: "Nexus 3.0",
     },
   ];
-
+  
   
   return (
-    <div className="min-h-screen bg-gray-100 pt-16">
+    <div className="min-h-screen bg-gray-100 pt-16 flex flex-col ">
       <NavBar />
       <Welcome />
       <AboutMe />
@@ -113,7 +112,7 @@ const App = () => {
       <Skills />
       <Certifications />
       <Contact />
-      <footer className="bg-blue-900 text-white py-4 text-center">
+      <footer className="bg-blue-900 text-sm text-white py-4 text-center">
         <p>
           &copy; {new Date().getFullYear()} Rasmiranjan Nayak. All rights
           reserved.

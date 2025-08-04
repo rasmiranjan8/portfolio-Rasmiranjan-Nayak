@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -5,115 +9,129 @@ import {
   FaReact,
   FaNodeJs,
   FaDatabase,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
 } from "react-icons/fa";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { FaInstagram } from "react-icons/fa";
 
 const AboutMe = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
-      easing: "ease-in-out",
-    });
+    AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
   }, []);
+
   return (
-    <section id="about" className="py-20 bg-blue-950 text-white">
-      <div data-aos="fade-up" className="container mx-auto px-4">
-        <h3 className="text-4xl font-extrabold bg-clip-text mb-12 text-center font-serif">
-          About Me
-        </h3>
+    <section id="about" className="py-16 bg-white text-black font-sans">
+      <div className="container mx-auto px-6 md:flex md:items-center md:space-x-12">
+        {/* Left Image Section */}
+        <div className="md:w-1/2" data-aos="fade-right">
+          <div className="relative">
+            <img
+              src="/profile.png" // replace with your image path
+              alt="Profile"
+              className="w-full object-cover"
+            />
+            <div className="absolute top-0 left-0 w-full h-full mix-blend-multiply" />
+          </div>
+        </div>
 
-        <div className="text-md md:text-lg leading-relaxed space-y-8 font-mono  tracking-wide">
-          <p className="font-medium">
-            I am a passionate full-stack web developer dedicated to building
-            efficient, scalable, and user-friendly applications. I specialize in
-            front-end technologies like:
+        {/* Right Content Section */}
+        <div className="md:w-1/2 mt-8 md:mt-0 space-y-6" data-aos="fade-left">
+          <h2 className="text-4xl font-bold" data-aos="fade-down">
+            ABOUT ME
+          </h2>
+          <p className="text-red-500 font-bold tracking-wide">
+            FULL-STACK DEVELOPER
           </p>
 
-          {/* Front-end Technologies */}
-          <div className="flex flex-wrap items-center space-x-6 mt-4">
-            <div className="flex items-center text-lg font-medium">
-              <FaHtml5 className="text-red-500" size={25} />
-              <span className="ml-3">HTML</span>
-            </div>
-            <div className="flex items-center text-lg font-medium">
-              <FaCss3Alt className="text-blue-500" size={25} />
-              <span className="ml-3">CSS</span>
-            </div>
-            <div className="flex items-center text-lg font-medium">
-              <FaJs className="text-yellow-500" size={25} />
-              <span className="ml-3">JavaScript</span>
-            </div>
-            <div className="flex items-center text-lg font-medium">
-              <FaReact className="text-blue-400" size={25} />
-              <span className="ml-3">React</span>
-            </div>
-            <div className="flex items-center text-lg font-medium">
-              <FaReact className="text-teal-400" size={25} />
-              <span className="ml-3">Tailwind CSS</span>
-            </div>
-          </div>
+          <p className="text-gray-700 leading-relaxed" data-aos="fade-up">
+            I am a passionate full-stack web developer focused on building
+            efficient, scalable, and user-friendly applications.
+          </p>
 
-          {/* Back-end Technologies */}
-          <p className="mt-8">On the back-end, I work with:</p>
-          <div className="flex flex-wrap items-center space-x-6 mt-4">
-            <div className="flex items-center text-lg font-medium">
-              <FaNodeJs className="text-green-500" size={25} />
-              <span className="ml-3">Node.js</span>
-            </div>
-            <div className="flex items-center text-lg font-medium">
-              <FaDatabase className="text-yellow-700" size={25} />
-              <span className="ml-3">SQL</span>
-            </div>
-            <div className="flex items-center text-lg font-medium">
-              <FaDatabase className="text-green-300" size={25} />
-              <span className="ml-3">MongoDB</span>
-            </div>
-          </div>
-
-          <p className="mt-8">
+          <p className="text-gray-700 leading-relaxed" data-aos="fade-up">
             My programming journey began with{" "}
-            <b className="text-yellow-400"> C </b>
-            and <b className="text-yellow-200"> C++ </b>, which developed my
-            logical and problem-solving skills, creating a strong foundation for
-            web development. Programming is the art of creating algorithms and
-            solving problems through logic, while development is the process of
-            implementing these solutions into functional and efficient
-            applications.
+            <b className="text-yellow-500 font-mono">C</b> and{" "}
+            <b className="text-yellow-300 font-mono">C++</b>, building strong
+            logical and problem-solving skills. With over{" "}
+            <b className="text-yellow-500 font-mono">
+              500+ LeetCode challenges
+            </b>{" "}
+            solved, I have proven expertise in coding and algorithms.
           </p>
 
-          <p className="mt-6">
-            With over{" "}
-            <b className="text-yellow-400">
-              500+ challenges solved on LeetCode
-            </b>
-            , I have proven my expertise in coding and problem-solving.
-          </p>
-
-          <p className="mt-8 font-Inter">
-            I am currently pursuing my studies at{" "}
-            <b className="text-teal-400">
+          <p className="text-gray-700 leading-relaxed" data-aos="fade-up">
+            Currently studying at{" "}
+            <b className="text-teal-500">
               Odisha University of Technology and Research, Bhubaneswar
             </b>
-            , where I have further honed my skills in both programming and
-            development, gaining a comprehensive understanding of modern
-            technologies and their applications.
+            , I continuously explore modern technologies to deliver
+            performance-driven solutions.
           </p>
 
-          <p>
-            Whether collaborating with teams or working solo, I aim to deliver
-            innovative, performance-driven solutions. I’m continuously learning
-            new technologies to stay at the forefront of web development trends.
-          </p>
+          {/* Tech Stack */}
+          <div
+            className="grid grid-cols-3 gap-4 font-mono text-gray-800"
+            data-aos="fade-up"
+          >
+            <div className="flex items-center space-x-2">
+              <FaHtml5 className="text-red-500" />
+              <span>HTML</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaCss3Alt className="text-blue-500" />
+              <span>CSS</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaJs className="text-yellow-500" />
+              <span>JavaScript</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaReact className="text-blue-400" />
+              <span>React</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaReact className="text-teal-400" />
+              <span>Tailwind CSS</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaNodeJs className="text-green-500" />
+              <span>Node.js</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaDatabase className="text-yellow-700" />
+              <span>SQL</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaDatabase className="text-green-300" />
+              <span>MongoDB</span>
+            </div>
+          </div>
 
-          <p className="mt-6">
-            In addition to technical skills, I believe in clear communication,
-            adaptability, and teamwork as essential aspects of creating
-            impactful projects that align with user needs and industry
-            standards.
-          </p>
+          {/* Social Links */}
+          <div className="flex items-center space-x-6 text-xl mt-4">
+            <a
+              href="www.linkedin.com/in/rasmiranjan-nayak-20389a286"
+              className="hover:text-blue-500"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/rasmiranjan1616"
+              className="hover:text-black"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="mailto:nayakrasmiranjan1616@gmail.com"
+              className="hover:text-blue-950"
+            >
+              <FaEnvelope />
+            </a>
+            <a href="#" className="hover:text-pink-500">
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
     </section>

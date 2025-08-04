@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+}
+
 
 @font-face {
   font-family: 'Montserrat';

@@ -33,32 +33,38 @@ const skills = [
 const Skills = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true,
       easing: "ease-in-out",
     });
   }, []);
+
   return (
-    <section id="skills" className="py-16 bg-blue-950 text-white">
+    <section id="skills" className="py-16 bg-gray-100 text-gray-900">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h3 className="text-4xl font-bold font-serif text-center mb-12 bg-clip-text text-white">
+        <h3 className="text-4xl font-bold font-sans text-center mb-12">
           Skills
         </h3>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+        <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6 justify-center">
           {skills.map((skill, index) => (
             <div
-              data-aos="flip-left"
               key={index}
-              className="flex flex-col items-center bg-gray-900 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 border border-gray-700"
+              className="group [perspective:1000px]"
+              data-aos="flip-left"
             >
-              {/* Skill Icon */}
-              <div className="text-5xl mb-3">{skill.icon}</div>
-
-              {/* Skill Name */}
-              <h4 className="text-lg font-semibold text-white">{skill.name}</h4>
+              <div className="relative w-full h-40 bg-white rounded-xl shadow-lg transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front side */}
+                <div className="absolute inset-0 flex items-center justify-center text-6xl [backface-visibility:hidden]">
+                  {skill.icon}
+                </div>
+                {/* Back side */}
+                <div className="absolute inset-0 flex items-center justify-center text-xl font-semibold bg-blue-500 text-white rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  {skill.name}
+                </div>
+              </div>
             </div>
           ))}
         </div>

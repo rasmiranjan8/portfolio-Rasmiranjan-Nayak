@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 shadow-md fixed top-0 left-0 w-full h-20 flex items-center z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white font-serif">
           Rasmiranjan Nayak
         </h1>
@@ -40,6 +40,7 @@ const NavBar = () => {
             <a
               href="#about"
               className="text-white hover:text-gray-100 hover:border-b"
+              onClick={toggleMenu}
             >
               About
             </a>
@@ -48,6 +49,7 @@ const NavBar = () => {
             <a
               href="#projects"
               className="text-white hover:text-gray-100 hover:border-b"
+              onClick={toggleMenu}
             >
               Projects
             </a>
@@ -56,6 +58,7 @@ const NavBar = () => {
             <a
               href="#skills"
               className="text-white hover:text-gray-100 hover:border-b"
+              onClick={toggleMenu}
             >
               Skills
             </a>
@@ -64,6 +67,7 @@ const NavBar = () => {
             <a
               href="#certifications"
               className="text-white hover:text-gray-100 hover:border-b"
+              onClick={toggleMenu}
             >
               certifications
             </a>
@@ -72,6 +76,7 @@ const NavBar = () => {
             <a
               href="#contact"
               className="text-white hover:text-gray-100 hover:border-b"
+              onClick={toggleMenu}
             >
               Contact
             </a>
