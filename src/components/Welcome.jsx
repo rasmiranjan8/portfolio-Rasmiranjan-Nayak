@@ -15,10 +15,10 @@ const Welcome = () => {
     window.open("/resume-Rasmiranjan Nayak.pdf", "_blank");
   };
   return (
-    <header className="bg-blue-950 h-screen text-white py-20 text-center">
+    <header className="bg-blue-950 min-h-screen h-auto text-white flex flex-col justify-center text-center">
       <div
         data-aos="zoom-in-up"
-        className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-10 px-6"
+        className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-10 px-6  py-20"
       >
         {/* Text Content */}
         <div className="max-w-lg">

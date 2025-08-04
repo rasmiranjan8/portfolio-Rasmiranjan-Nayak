@@ -40,7 +40,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="py-16 bg-gray-100 text-gray-900">
+    <section id="skills" className="py-20 bg-gray-100 text-gray-900">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <h3 className="text-4xl font-bold font-sans text-center mb-12">

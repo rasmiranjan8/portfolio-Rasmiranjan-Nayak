@@ -104,7 +104,7 @@ const App = () => {
   
   
   return (
-    <div className="min-h-screen bg-gray-100 pt-16 flex flex-col ">
+    <div className="min-h-screen bg-gray-100  flex flex-col ">
       <NavBar />
       <Welcome />
       <AboutMe />
